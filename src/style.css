@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url('assets/fonts/ProximaNova-Light.otf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+hr {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-top: 1px solid white;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  max-width: 2000px;
+  max-height: 95px;
+}
+
+.navbar {
+  font-family: 'Proxima';
+  padding: 10px;
+  background-color: #353535;
+  width: 100%;
+}
+
+.navbar-nav {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar .container {
+  justify-content: flex-start;
+}
+
+.navigation-bar ul {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-bar a {
+  display: block;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-home {
+  align-items: flex-start;
+  width: 20%;
+  font-size: 75px;
+  padding: 0;
+}
+
+.navbar-content {
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.navbar-contact {
+  justify-content: flex-end;
+  font-size: 25px;
+  width: 25%;
+  background-color: #353535;
+  color: white;
+}
+
+.navbar-referral {
+  text-align: center;
+  font-size: 15px;
+  justify-content: center;
+  width: 15%;
+  background-color: #e8c096;
+  border: 3px solid white;
+}
