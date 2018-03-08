@@ -16,11 +16,11 @@ const NavigationBar = () => {
       <Nav className='navbar-contact'>
         <NavItem href='#'>1 (888) 494-7280</NavItem>
       </Nav>
-      <Nav className='navbar-referral'>
-        <NavItem href='#'>
-          Chat with a love expert<br/><hr/>
-          <b>CLICK HERE FOR</b><br/>
-          <b>A FREE SCREENING</b>
+      <Nav className='navbar-referral' href='#'>
+        <NavItem>
+          <p>Chat with a love expert</p><hr/>
+          <a>CLICK HERE FOR</a><br/>
+          <a>FREE SCREENING</a>
         </NavItem>
       </Nav>
     </Navbar>

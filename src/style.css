@@ -3,40 +3,23 @@
   src: url('assets/fonts/ProximaNova-Light.otf');
 }
 
+@font-face {
+  font-family: 'Proxima-ExtraBold';
+  src: url('assets/fonts/ProximaNova-Extrabold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima-Bold';
+  src: url('assets/fonts/ProximaNova-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima-SemiBold';
+  src: url('assets/fonts/ProximaNova-Semibold.otf');
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-}
-
-.image { 
-  width: 100%;
-  height: 315px;
-  overflow: hidden;
-}
-
-.image img {
-  margin-top: -200px;
-}
-
-.intro { 
-  position: absolute; 
-  top: 280px; 
-  left: 0; 
-  color: white; 
-  font-family: 'Proxima';
-  font-size: 20px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px;
-  padding-bottom: 20px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.intro span {
-  align-self: flex-end;
 }
 
 body {
@@ -48,6 +31,7 @@ hr {
   margin-top: 1px;
   margin-bottom: 1px;
   border-top: 1px solid white;
+  width: 75%;
 }
 
 .container {
@@ -55,7 +39,7 @@ hr {
   padding: 0;
   flex-wrap: nowrap;
   max-width: 2000px;
-  max-height: 95px;
+  max-height: 80px;
 }
 
 .navbar {
@@ -83,7 +67,7 @@ hr {
   padding: 0;
 }
 
-.navigation-bar a {
+.navigation-bar li {
   display: block;
   padding: 10px;
   padding-top: 10px;
@@ -92,31 +76,267 @@ hr {
   text-decoration: none;
 }
 
+.navigation-bar li a {
+  color: white;
+  text-decoration: none;
+}
+
 .navbar-home {
   align-items: flex-start;
-  width: 20%;
-  font-size: 75px;
+  width: 17%;
+  font-size: 55px;
   padding: 0;
 }
 
 .navbar-content {
-  width: 40%;
+  width: 43%;
   justify-content: flex-start;
+}
+
+.navbar-content a {
+  font-family: 'Proxima-SemiBold';
+}
+
+.navbar-content li a {
+  font-weight: 800;
+  font-size: 18px;
 }
 
 .navbar-contact {
   justify-content: flex-end;
-  font-size: 25px;
-  width: 25%;
+  font-size: 20px;
+  font-weight: 400px;
+  width: 26%;
   background-color: #353535;
   color: white;
 }
 
+.navbar-contact a {
+  font-family: 'Proxima';
+  font-weight: bold;
+  font-size: 28px;
+}
+
 .navbar-referral {
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
   justify-content: center;
-  width: 15%;
-  background-color: #e8c096;
+  vertical-align: middle;
+  width: 14%;
+  height: 65px;
+  background-color: #e2b08a;
   border: 3px solid white;
+}
+
+.navbar-referral li {
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar-referral a {
+  font-family: 'Proxima-SemiBold';
+}
+
+.navbar-referral p {
+  font-family: 'Proxima';
+  margin: 0;
+  padding: 0;
+}
+
+.image { 
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.image img {
+  margin-top: -165px;
+}
+
+.intro {
+  position: absolute; 
+  top: 216px;
+  left: 0; 
+  color: white; 
+  font-family: 'Proxima';
+  font-size: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro span {
+  align-self: flex-end;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  float: center;
+  max-height: 190px;
+  padding: 0;
+  margin: 0;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+.progressbar li {
+  width: 190px;
+  list-style-type: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 13px;
+  display: inline;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1px;
+  color: grey;
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  vertical-align: text-bottom;
+  display: block;
+  font-family: 'Proxima';
+  font-size: 25px;
+  font-weight: 1000px;
+  color: grey;
+  background: white;
+  border:1px solid grey;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  padding-left: 2px;
+  margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+.progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: grey;
+  position: absolute;
+  left: -50%;
+  top: 50px;
+  z-index: -1; /*put it behind the numbers*/
+}
+
+.progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+.progressbar li.active a {
+  color: #525459;
+  font-weight: 1000px;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.progressbar li.active:before {
+  color: #525459;
+  border: 3px solid #525459;
+  line-height: 40px;
+  padding-left: 1px;
+}
+
+.sign-up {
+  text-align: center;
+  position: relative;
+}
+
+.sign-up fieldset {
+  background: white;
+  padding: 20px 30px;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+.sign-up fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+.sign-up input, .sign-up textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+.sign-up input:focus, .sign-up textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+.sign-up .action-button {
+    width: 100px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+.sign-up .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 30px;
+  font-family: 'Proxima';
+  color: black;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
 }
