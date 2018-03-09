@@ -320,7 +320,7 @@ select.no-radius option {
   border: 1px solid black !important;
   height: 45px;
   width: 65px !important;
-  margin: 0px;
+  margin: 10px;
 }
 
 .binary-input-option {
