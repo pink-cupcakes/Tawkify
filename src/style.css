@@ -260,6 +260,97 @@ hr {
   position: relative;
 }
 
+/*divs controlling form alignment*/
+.row {
+  height: 180px;
+}
+
+.col {
+  display: flex;
+  align-self:stretch;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  height: 100%;
+  width: 300px;
+}
+
+.title {
+  font-family: 'Proxima-SemiBold';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: lighter;
+  color: grey;
+}
+
+select.no-radius {
+  border:none;
+}
+
+select.no-radius option {
+  border:none;
+}
+
+.select-wrapper {
+  border: 1px solid black;
+  border-radius: 0px;
+  margin-bottom: 5px;
+}
+
+.input {
+  border: 1px solid black !important;
+  margin-top: 5px; 
+  margin-bottom: 5px;
+  height: 45px;
+}
+
+.date-input {
+  border: 1px solid black !important;
+  height: 45px;
+  width: 50px !important;
+  margin: 10px;
+}
+
+.date-input-year {
+  border: 1px solid black !important;
+  height: 45px;
+  width: 65px !important;
+  margin: 10px;
+}
+
+.binary-input-option {
+  box-sizing: border-box;
+  width: 100px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  background-color: #ccc !important;
+  color: #fff !important;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.binary-input-option.selected {
+  background-color: #00B9D7 !important;
+}
+
+.col.bool {
+  margin-top: 12px;
+}
+
+.bool-container {
+  position: relative;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 .sign-up fieldset {
   background: white;
   padding: 20px 30px;
@@ -272,20 +363,20 @@ hr {
 
 /*Hide all except first fieldset*/
 .sign-up fieldset:not(:first-of-type) {
-    display: none;
+  display: none;
 }
 
 /*inputs*/
 .sign-up input, .sign-up textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
 }
 
 .sign-up input:focus, .sign-up textarea:focus {
